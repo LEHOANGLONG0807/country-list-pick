@@ -99,11 +99,13 @@ class _SelectionListState extends State<SelectionList> {
                             style: TextStyle(color: widget.theme?.labelColor ?? Colors.black),
                           ),
                         ),
-                        Container(
+          Theme(
+          data: ThemeData.light(),
+            child: Container(
                           color: Colors.white,
                           child: TextField(
                             controller: _controller,
-                            style: const TextStyle(fontSize: 15, color: Colors.black),
+                            style: const TextStyle(fontSize: 16, color: Colors.black),
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               focusedBorder: InputBorder.none,
@@ -115,7 +117,7 @@ class _SelectionListState extends State<SelectionList> {
                             ),
                             onChanged: _filterElements,
                           ),
-                        ),
+                        ), ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Text(
@@ -137,7 +139,7 @@ class _SelectionListState extends State<SelectionList> {
                               ),
                               title: Text(
                                 widget.initialSelection!.name!,
-                                style: TextStyle(fontSize: 15, color: Colors.black),
+                                style: TextStyle(fontSize: 16, color: Colors.black),
                               ),
                               trailing: Padding(
                                 padding: const EdgeInsets.only(right: 20.0),
