@@ -96,25 +96,22 @@ class _SelectionListState extends State<SelectionList> {
                           padding: const EdgeInsets.all(15.0),
                           child: Text(
                             widget.theme?.searchText ?? 'SEARCH',
-                            style: TextStyle(
-                                color:
-                                    widget.theme?.labelColor ?? Colors.black),
+                            style: TextStyle(color: widget.theme?.labelColor ?? Colors.black),
                           ),
                         ),
                         Container(
                           color: Colors.white,
                           child: TextField(
                             controller: _controller,
+                            style: const TextStyle(fontSize: 15, color: Colors.black),
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.only(
-                                  left: 15, bottom: 0, top: 0, right: 15),
-                              hintText:
-                                  widget.theme?.searchHintText ?? "Search...",
+                              contentPadding: EdgeInsets.only(left: 15, bottom: 0, top: 0, right: 15),
+                              hintText: widget.theme?.searchHintText ?? "Search...",
                             ),
                             onChanged: _filterElements,
                           ),
@@ -138,7 +135,10 @@ class _SelectionListState extends State<SelectionList> {
                                 package: 'country_list_pick',
                                 width: 32.0,
                               ),
-                              title: Text(widget.initialSelection!.name!),
+                              title: Text(
+                                widget.initialSelection!.name!,
+                                style: TextStyle(fontSize: 15, color: Colors.black),
+                              ),
                               trailing: Padding(
                                 padding: const EdgeInsets.only(right: 20.0),
                                 child: Icon(Icons.check, color: Colors.green),
